@@ -1,0 +1,15 @@
+<script src="hatenablog-include.js"></script>
+
+<script>
+    //1:microCMS documentID, 2:template html selector
+    inc = new HatenaDynamicInclude('dynamic-test','#js-dynamic-contents');
+    inc.include();
+</script>
+
+<div style="border : dotted 3px #333; margin:5px; padding:5px">
+    <div id="js-dynamic-contents">
+      <div id='js-dynamic-contents-category'></div>
+      <div id='js-dynamic-contents-html'></div>
+      <p>最終更新日：<span id="js-dynamic-contents-updatedAt"></span></p>
+    </div>
+</div>

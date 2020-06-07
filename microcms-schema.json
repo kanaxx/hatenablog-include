@@ -1,0 +1,21 @@
+[
+    {
+        "fieldId": "category",
+        "name": "カテゴリ",
+        "kind": "text",
+        "description": "このHTMLを利用するカテゴリ"
+    },
+    {
+        "fieldId": "html",
+        "name": "表示するHTML",
+        "kind": "richEditor",
+        "description": "記事内に差し込むHTML",
+        "required": true
+    },
+    {
+        "fieldId": "description",
+        "name": "説明・メモ",
+        "kind": "text",
+        "description": "説明文"
+    }
+]
