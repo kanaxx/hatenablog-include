@@ -11,7 +11,11 @@ class HatenaDynamicInclude{
 
     constructor(contentsId, elementId) {
         this.contentsId = contentsId;
-        this.elementId = elementId;
+        if(!elementId.startsWith('#')){
+            this.elementId = '#' + elementId;
+        }else{
+            this.elementId = elementId;
+        }
     }
     
     async fetch(){
@@ -72,8 +76,3 @@ class HatenaDynamicInclude{
         console.info('%s|end of execute', this.constructor.name);
     }
 }
-
-inc1 = new HatenaDynamicInclude('dynamic-test','#js-dynamic1');
-inc1.include();
-inc2 = new HatenaDynamicInclude('test-3lines','#js-dynamic2');
-inc2.include();
